@@ -1,7 +1,7 @@
 # Project 3 - *Twitter Clone*
 
 
-Time spent: **2** hours spent in total
+Time spent: **3** hours spent in total
 
 The following **required** functionality is completed:
 
