@@ -1,10 +1,7 @@
-# Project 3 - *Name of App Here*
+# Project 3 - *Twitter Clone*
 
-**Name of your app** is a basic twitter app to read your tweets.
 
 Time spent: **X** hours spent in total
-
-## User Stories
 
 The following **required** functionality is completed:
 
@@ -12,11 +9,11 @@ The following **required** functionality is completed:
 - [x] User can log in. (1pt)
 - [x] User can log out. (1pt)
 - [x] User stays logged in across restarts. (1pt)
-- [ ] User can view tweets with the user profile picture, username, and tweet text. (6pts)
+- [x] User can view tweets with the user profile picture, username, and tweet text. (6pts)
 
 The following **bonus** features are implemented:
 
-- [ ] User can pull to refresh. (1pt)
+- [x] User can pull to refresh. (1pt)
 - [ ] User can load past tweets infinitely. (2pts)
 
 ## Video Walkthrough
