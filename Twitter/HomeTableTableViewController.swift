@@ -10,20 +10,22 @@ class HomeTableTableViewController: UITableViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadTweet()
+        loadTweets()
         
         
-        myRefreshControl.addTarget(self, action: #selector(loadTweet), for: .valueChanged)
+        myRefreshControl.addTarget(self, action: #selector(loadTweets), for: .valueChanged)
         tableView.refreshControl = myRefreshControl
     }
     
-    @objc func loadTweet(){
+    @objc func loadTweets(){
+        
+        numberofTweets = 20
         
         let myURL = "https://api.twitter.com/1.1/statuses/home_timeline.json"
-        let myParams = ["count": 10]
+        let myParams = ["count": numberofTweets]
         
         
-        TwitterAPICaller.client?.getDictionariesRequest(url: myURL, parameters: myParams, success: { tweets in
+        TwitterAPICaller.client?.getDictionariesRequest(url: myURL, parameters: myParams as [String : Any], success: { tweets in
             
             self.tweetArray.removeAll()
             
@@ -38,6 +40,37 @@ class HomeTableTableViewController: UITableViewController{
         }, failure: { Error in
             print("could not get tweets")
         })
+    }
+    
+    
+    func loadMoreTweets(){
+        let myURL = "https://api.twitter.com/1.1/statuses/home_timeline.json"
+        
+        numberofTweets += 20
+        let myParams = ["count": numberofTweets]
+        
+        TwitterAPICaller.client?.getDictionariesRequest(url: myURL, parameters: myParams as [String : Any], success: { tweets in
+            
+            self.tweetArray.removeAll()
+            
+            for tweet in tweets{
+                self.tweetArray.append(tweet)
+            }
+            
+            self.tableView.reloadData()
+            
+        }, failure: { Error in
+            print("could not get tweets")
+        })
+        
+        
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row + 1 == tweetArray.count{
+            loadMoreTweets()
+        }
     }
     
     
