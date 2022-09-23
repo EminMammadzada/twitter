@@ -20,5 +20,11 @@ The following **bonus** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
+Part 3.1.1 User can view see the icon, the launch screen, can log in, can log out.
+
+<img src='https://media.giphy.com/media/3rmfVa9zzIPcUKsVNq/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+Part 3.1.2 Infinite scroll
+
+<img src='https://media.giphy.com/media/JF6zbFnOknLW1c6MXY/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
