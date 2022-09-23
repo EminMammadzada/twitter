@@ -28,3 +28,7 @@ Part 3.1.1 User can view see the icon, the launch screen, can log in, can log ou
 Part 3.1.2 Infinite scroll
 
 <img src="https://media.giphy.com/media/JF6zbFnOknLW1c6MXY/giphy.gif"/>
+
+Part 3.1.3 Pull to refresh
+
+<img src="https://media.giphy.com/media/kqgs8bHkcoa1uFvJIT/giphy.gif"/>
