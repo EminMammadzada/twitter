@@ -32,3 +32,7 @@ Part 3.1.2 Infinite scroll
 Part 3.1.3 Pull to refresh
 
 <img src="https://media.giphy.com/media/kqgs8bHkcoa1uFvJIT/giphy.gif"/>
+
+Part 3.1.4 Save the login info when exiting the app
+
+<img src="https://media.giphy.com/media/zUxwQjohLTZXGK1nYY/giphy.gif"/>
