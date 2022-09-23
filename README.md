@@ -23,8 +23,8 @@ Here's a walkthrough of implemented user stories:
 
 Part 3.1.1 User can view see the icon, the launch screen, can log in, can log out.
 
-<img src="https://media.giphy.com/media/3rmfVa9zzIPcUKsVNq/giphy.gif" title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src="https://media.giphy.com/media/JF6zbFnOknLW1c6MXY/giphy.gif"/>
 
 Part 3.1.2 Infinite scroll
 
-<img src='https://media.giphy.com/media/JF6zbFnOknLW1c6MXY/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src="https://media.giphy.com/media/JF6zbFnOknLW1c6MXY/giphy.gif"/>
