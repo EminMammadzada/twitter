@@ -50,6 +50,18 @@
             ReferencedContainer = "container:Twitter.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "API_KEY"
+            value = "vzJBJadKDB5MFmcmTfWMyZ76y"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "API_SECRET"
+            value = "iIulVmbZLqQ1PDG8bovOh4pgZLbCSKJAUOnyzQi7CkRecopXxG"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
