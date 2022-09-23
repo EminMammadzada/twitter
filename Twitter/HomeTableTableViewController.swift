@@ -8,7 +8,8 @@ class HomeTableTableViewController: UITableViewController {
     }
 
     @IBAction func onLogout(_ sender: UIBarButtonItem) {
-        
+        TwitterAPICaller.client?.logout()
+        self.dismiss(animated:true, completion: nil)
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {

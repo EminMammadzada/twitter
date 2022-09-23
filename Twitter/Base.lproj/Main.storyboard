@@ -42,7 +42,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="3y2-6Y-qcY" kind="presentation" identifier="loginToHome" id="Rq4-FS-TvB"/>
+                        <segue destination="3y2-6Y-qcY" kind="show" identifier="loginToHome" animates="NO" id="Rq4-FS-TvB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rg5-xM-yS1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -89,6 +89,7 @@
         <scene sceneID="qVS-f9-dnZ">
             <objects>
                 <navigationController id="3y2-6Y-qcY" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="EFs-lI-boP"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="yrV-qC-enO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
