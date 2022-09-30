@@ -17,6 +17,13 @@ class HomeTableTableViewController: UITableViewController{
         tableView.refreshControl = myRefreshControl
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        loadTweets()
+        myRefreshControl.addTarget(self, action: #selector(loadTweets), for: .valueChanged)
+        tableView.refreshControl = myRefreshControl
+    }
+    
     @objc func loadTweets(){
         
         numberofTweets = 20
@@ -33,12 +40,13 @@ class HomeTableTableViewController: UITableViewController{
                 self.tweetArray.append(tweet)
             }
             
-            self.tableView.reloadData()
-            self.myRefreshControl.endRefreshing()
-            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+                self.myRefreshControl.endRefreshing()
+            }
             
         }, failure: { Error in
-            print("could not get tweets")
+            print(Error)
         })
     }
     
@@ -60,7 +68,7 @@ class HomeTableTableViewController: UITableViewController{
             self.tableView.reloadData()
             
         }, failure: { Error in
-            print("could not get tweets")
+            print(Error)
         })
         
         
