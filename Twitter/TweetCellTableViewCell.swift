@@ -6,6 +6,11 @@ class TweetCellTableViewCell: UITableViewCell {
     @IBOutlet weak var tweetContentLabel: UILabel!
     @IBOutlet weak var userNameLabel: UILabel!
     
+    @IBOutlet weak var retweetButton: UIButton!
+    @IBOutlet weak var favButton: UIButton!
+    
+    var favorited: Bool = false
+    var tweetId: Int = -1
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -17,5 +22,37 @@ class TweetCellTableViewCell: UITableViewCell {
 
     
     }
+    
+    func setFavorited(_ isFavorited:Bool){
+        favorited = isFavorited
+        if (favorited){
+            favButton.setImage(UIImage(named: "favor-icon-red"), for: UIControl.State.normal)
+        } else{
+            favButton.setImage(UIImage(named: "favor-icon"), for: UIControl.State.normal)
+        }
+    }
+    
+    
 
+    @IBAction func retweet(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func favorite(_ sender: UIButton) {
+        let toBeFavorited = !favorited
+        if (toBeFavorited) {
+            TwitterAPICaller.client?.favoriteTweet(tweetId: tweetId, success: {
+                self.setFavorited(true)
+            }, failure: { Error in
+                print(Error)
+            })
+        } else{
+            TwitterAPICaller.client?.unfavoriteTweet(tweetId: tweetId, success: {
+                self.setFavorited(false)
+            }, failure: { Error in
+                print(Error)
+            })
+        }
+    }
+    
 }
